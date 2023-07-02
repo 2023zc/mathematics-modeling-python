@@ -35,6 +35,28 @@ for i in range(n):
             maxx=fx[i]
             point=i
             
-print(f"模拟得到的最大值为:{maxx}")
+print(f"一次模拟得到的最大值为:{maxx}")
+print("当取到最大值时的对应变量为:")
+print(f"x1:  {x1[point]}   x2:  {x2[point]}   x3:  {x3[point]}")
+t_x1=x1[point]
+t_x2=x2[point]
+t_x3=x3[point]
+"""
+上方为一次模拟的结果,可以通过缩小变量的生成范围来得到更为精确的值
+tip:缩小的范围要看得到的变量的范围与原范围的关系,一般缩小到得到的结果左右1的范围
+"""
+print("下面进行缩小范围:\n-------------------")
+x2=np.random.uniform(t_x2-1,t_x2+1,size=n)
+x1=x2+10
+x3=np.random.uniform(t_x3-1,t_x3+1,size=n)
+maxx=-9999
+fx=np.zeros(n)
+for i1 in range(n):
+    if(check(x1[i1],x2[i1],x3[i1])):   #验证是否可行
+        fx[i1]=x1[i1]*x2[i1]*x3[i1]
+        if(fx[i1]>maxx):
+            maxx=fx[i1]
+            point=i
+print(f"二次模拟得到的最大值为:{maxx}")
 print("当取到最大值时的对应变量为:")
 print(f"x1:  {x1[point]}   x2:  {x2[point]}   x3:  {x3[point]}")
