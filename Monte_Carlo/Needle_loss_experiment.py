@@ -1,10 +1,9 @@
 import numpy as np
 import random as rand
-import matplotlib
-from matplotlib import pyplot as plt
-result=np.zeros(100)       
+from matplotlib import pyplot as plt 
 n=int(input("请输入你要投的针数:\n")) 
 nums=int(input("请输入你要进行的实验次数:\n"))
+result=np.zeros(nums) 
 a=1.15   ##两平行线之间的宽度
 l=0.85   ##表示针的长度
 for num in range(nums):
