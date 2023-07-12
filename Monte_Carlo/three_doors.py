@@ -1,6 +1,5 @@
 import numpy as np
 import random as rand
-import matplotlib
 from matplotlib import pyplot as plt
 a=int(input("请输入你要模拟的次数:")) ##模拟次数
 win_no_change=0  ##没换门时赢的次数
