@@ -39,7 +39,7 @@ def stimulate_one_day(n):
 ans_customer_num,ans_average_wait_time=stimulate_one_day(100000)   
 ans_average_customer_num=np.average(ans_customer_num)
 ans_Averaged_wait_time=np.average(ans_average_wait_time)
-print(ans_average_customer_num)
-print(ans_Averaged_wait_time)
+print(f"平均接待顾客数量为:{ans_average_customer_num}")
+print(f"顾客平均等待时间为:{ans_Averaged_wait_time}")
 
     
