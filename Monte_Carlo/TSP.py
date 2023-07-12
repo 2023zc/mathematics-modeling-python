@@ -34,7 +34,7 @@ for i in range(n):
 x[n]=citys[best_routine[0]][0]
 y[n]=citys[best_routine[0]][1]
 plt.plot(x,y,"o-r")
-print("最好的路线为:")
+print("最好的路线为 :")
 for i in best_routine:
     print(f"{i}-->",end="")
 print(best_routine[0])
